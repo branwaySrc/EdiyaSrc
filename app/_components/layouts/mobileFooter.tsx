@@ -1,8 +1,6 @@
 import { PropsWithChildren } from "react";
 
-interface MobileFooterProps extends PropsWithChildren {}
-
-export default function MobileFooter(props: MobileFooterProps) {
+export default function MobileFooter(props: PropsWithChildren) {
 	return (
 		<footer className="bg-slate-300  w-full flex">
 			<div className="px-4 py-6 text-slate-500">

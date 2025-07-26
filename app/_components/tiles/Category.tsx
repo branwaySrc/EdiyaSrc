@@ -1,7 +1,6 @@
 import { PropsWithChildren } from "react";
-interface CategoryProps extends PropsWithChildren {}
 
-function CategoryBar(props: CategoryProps) {
+function CategoryBar(props: PropsWithChildren) {
 	const topSticky = "sticky top-0 z-50";
 	return (
 		<aside className={`flex gap-2 py-2 border-b border-slate-200 bg-white ${topSticky}`}>

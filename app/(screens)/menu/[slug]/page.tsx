@@ -1,11 +1,15 @@
-// app/menu/[slug]/page.tsx
-
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 
-export default function MenuDetailPage({ params }: { params: { slug: string } }) {
+interface MenuDetailPageProps {
+	params: {
+		slug: string;
+	};
+}
+
+export default function MenuDetailPage({ params }: MenuDetailPageProps) {
 	const { slug } = params;
 
-	// 예시: slug 검증 또는 데이터 fetch
 	if (!slug) {
 		notFound();
 	}

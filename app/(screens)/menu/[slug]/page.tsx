@@ -1,6 +1,6 @@
-
 import { defaultItem } from "@/app/util/sampleData";
 import { notFound } from "next/navigation";
+import NavHeader from "@/app/_components/tiles/NavHeader";
 
 // Correctly define PageProps to indicate 'params' is a Promise
 type PageProps = {
@@ -10,7 +10,7 @@ type PageProps = {
 export default async function MenuDetailPage({ params }: PageProps) {
 	// Await the params to get the object with the slug
 	const resolvedParams = await params;
-	const product = defaultItem.find(item => item.slug === resolvedParams.slug);
+	const product = defaultItem.find(product => product.slug === resolvedParams.slug);
 
 	if (!product) {
 		notFound();
@@ -18,6 +18,7 @@ export default async function MenuDetailPage({ params }: PageProps) {
 
 	return (
 		<main className="p-4">
+			<NavHeader title={product.productName} />
 			<h1 className="text-xl font-bold">{product.productName}</h1>
 			<p className="text-sm text-slate-600">{product.productDescription}</p>
 			<p className="font-semibold">{product.productPrice}원</p>

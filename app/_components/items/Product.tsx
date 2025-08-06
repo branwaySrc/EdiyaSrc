@@ -23,7 +23,7 @@ function ProductItem(props: ProductItemProps) {
 
 	return (
 		<Link href={`./menu/${props.slug}`}>
-			<li className="w-full border border-slate-400 rounded-lg p-4 flex justify-between">
+			<li className="w-full border border-slate-200 rounded-lg p-4 flex justify-between">
 				<section className="flex flex-col max-w-[320px] gap-2 justify-between">
 					<div className="flex flex-col gap-2">
 						<h2 className="font-bold text-md ">{props.productName}</h2>
@@ -41,7 +41,7 @@ function ProductItem(props: ProductItemProps) {
 					</article>
 				</section>
 				<aside className="w-full max-w-[120px] min-w-[100px]">
-					<div className="border rounded-md border-slate-300 overflow-hidden ">
+					<div className="border rounded-md border-slate-200 overflow-hidden ">
 						<Image alt={"menu"} src={props.productImage || "./noImage"} width={120} height={120} />
 					</div>
 				</aside>

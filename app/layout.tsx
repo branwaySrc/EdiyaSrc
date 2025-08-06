@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Noto_Sans_KR } from "next/font/google";
-import MobileLayout from "@/app/_components/layouts/mobileLayout";
 import "./globals.css";
+import { Noto_Sans_KR } from "next/font/google";
+import MobileLayout from "@/app/_components/layouts/mobileLayout";
 import MobileHeader from "@/app/_components/layouts/mobileHeader";
 import MobileFooter from "./_components/layouts/mobileFooter";
 import MobileBody from "./_components/layouts/mobileBody";

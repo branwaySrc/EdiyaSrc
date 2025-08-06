@@ -1,1 +1,8 @@
 @import "tailwindcss";
+:root {
+	--font-noto-sans-kr: "Noto Sans KR", sans-serif;
+}
+body {
+	font-family: var(--font-noto-sans-kr);
+	line-height: 1;
+}

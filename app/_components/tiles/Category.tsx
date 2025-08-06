@@ -3,8 +3,8 @@ import { PropsWithChildren } from "react";
 function CategoryBar(props: PropsWithChildren) {
 	const topSticky = "sticky top-0 z-50";
 	return (
-		<aside className={`flex gap-2 py-2 border-b border-slate-200 bg-white ${topSticky}`}>
-			<span className="ml-[0px] " />
+		<aside className={`flex gap-2 py-2 border-b border-slate-400 bg-white ${topSticky}`}>
+			<span />
 			{props.children}
 		</aside>
 	);
@@ -13,9 +13,9 @@ function CategoryBar(props: PropsWithChildren) {
 interface CategoryItemProps {
 	category?: string;
 	onClick?: () => void;
-	active?: boolean; // 선택된 상태 (props.current → active로 통일)
+	active?: boolean;
 	disabled?: boolean;
-	hidden?: boolean; // hidden 상태
+	hidden?: boolean;
 }
 
 function CategoryItem(props: CategoryItemProps) {

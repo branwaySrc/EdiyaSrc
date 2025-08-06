@@ -11,16 +11,6 @@ const notoSansKR = Noto_Sans_KR({
 	subsets: ["latin"],
 });
 
-const geistSans = Geist({
-	variable: "--font-geist-sans",
-	subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-	variable: "--font-geist-mono",
-	subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
 	title: "이디야 월피동점 메뉴판",
 	description: "이디야커피 월피동점",

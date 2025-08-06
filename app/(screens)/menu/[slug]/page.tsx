@@ -1,12 +1,16 @@
+
 import { defaultItem } from "@/app/util/sampleData";
 import { notFound } from "next/navigation";
 
+// Correctly define PageProps to indicate 'params' is a Promise
 type PageProps = {
-	params: { slug: string };
+	params: Promise<{ slug: string }>;
 };
 
-export default function MenuDetailPage({ params }: PageProps) {
-	const product = defaultItem.find(item => item.slug === params.slug);
+export default async function MenuDetailPage({ params }: PageProps) {
+	// Await the params to get the object with the slug
+	const resolvedParams = await params;
+	const product = defaultItem.find(item => item.slug === resolvedParams.slug);
 
 	if (!product) {
 		notFound();

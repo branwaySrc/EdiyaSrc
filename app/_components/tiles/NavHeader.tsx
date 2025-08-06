@@ -5,9 +5,9 @@ interface NavHeader {
 
 export default function NavHeader(props: NavHeader) {
 	return (
-		<nav className="flex gap-2 items-center">
+		<nav className="flex gap-3 items-center py-3 px-2 border-b border-slate-200">
 			<BackAction />
-			<div className="font-bold mb-1">{props.title || "No Title"}</div>
+			<div className="font-bold text-xl">{props.title || "No Title"}</div>
 		</nav>
 	);
 }

@@ -1,6 +1,7 @@
 import { defaultItem } from "@/app/util/sampleData";
 import { notFound } from "next/navigation";
 import NavHeader from "@/app/_components/tiles/NavHeader";
+import Image from "next/image";
 
 // Correctly define PageProps to indicate 'params' is a Promise
 type PageProps = {
@@ -17,12 +18,17 @@ export default async function MenuDetailPage({ params }: PageProps) {
 	}
 
 	return (
-		<main className="p-4">
+		<>
 			<NavHeader title={product.productName} />
-			<h1 className="text-xl font-bold">{product.productName}</h1>
-			<p className="text-sm text-slate-600">{product.productDescription}</p>
-			<p className="font-semibold">{product.productPrice}원</p>
-			<img src={product.productImage} alt={product.productName} className="w-64 h-64 object-cover mt-4" />
-		</main>
+			<main className="p-4">
+				<legend className="flex items-center justify-center">
+					<Image src={product.productImage} alt={product.productName} width={320} height={320} />
+				</legend>
+				<div className="flex flex-col gap-2">
+					<p className="text-sm text-slate-600 leading-5">{product.productDescription}</p>
+					<p className="font-semibold text-xl">{product.productPrice} 원</p>
+				</div>
+			</main>
+		</>
 	);
 }

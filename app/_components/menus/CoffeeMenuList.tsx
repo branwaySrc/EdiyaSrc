@@ -1,7 +1,7 @@
 import Product from "../items/Product";
-import { defaultItem } from "@/app/_util/sampleData";
-export default function CaffeinMenuList() {
-	const DATA = defaultItem;
+import { coffeeMenu } from "@/app/_util/data/coffeeMenu";
+export default function CoffeeMenuList() {
+	const DATA = coffeeMenu;
 	return (
 		<Product.List>
 			{DATA.map(product => (

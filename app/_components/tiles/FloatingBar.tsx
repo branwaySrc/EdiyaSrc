@@ -4,10 +4,10 @@ import { useCart } from "@/app/_util/cartContext";
 import Toast from "../items/Toast";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { CartItem } from "@/app/_util/types";
+import { AddToCartItem } from "@/app/_util/types";
 
 interface Props {
-	product: CartItem;
+	product: AddToCartItem;
 }
 
 export default function FloatingBar(props: Props) {

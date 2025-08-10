@@ -1,10 +1,8 @@
-import { defaultItem } from "@/app/_util/sampleData";
+import { ediyaMenu } from "@/app/_util/data";
 import { notFound } from "next/navigation";
 import NavHeader from "@/app/_components/tiles/NavHeader";
 import Image from "next/image";
-import FloatingBar from "@/app/_components/tiles/FloatingBar";
 import { ProductType } from "@/app/_util/types";
-
 import ProductInteraction from "./_components/ProductInteraction";
 
 type PageProps = {
@@ -12,7 +10,7 @@ type PageProps = {
 };
 
 export default async function MenuDetailPage({ params }: PageProps) {
-	const data: ProductType[] = defaultItem;
+	const data: ProductType[] = ediyaMenu;
 	const resolvedParams = await params;
 	const product = data.find(product => product.slug === resolvedParams.slug);
 

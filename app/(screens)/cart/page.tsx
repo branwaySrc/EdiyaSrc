@@ -1,4 +1,3 @@
-// app/cart/page.tsx (수정된 코드)
 "use client";
 
 import { useCart } from "@/app/_util/cartContext";

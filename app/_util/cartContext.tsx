@@ -1,10 +1,10 @@
 "use client";
 
 import { createContext, useContext, useState, useEffect, ReactNode } from "react";
-import { CartItem, AddToCartItem } from "./types";
+import { AddToCartItem } from "./types";
 
 interface CartContextType {
-	cart: CartItem[];
+	cart: AddToCartItem[];
 	addToCart: (item: AddToCartItem) => void;
 	removeItem: (slug: string, isIce: boolean) => void;
 	updateQuantity: (slug: string, isIce: boolean, quantity: number) => void;
@@ -16,7 +16,7 @@ interface CartProviderProps {
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
 export function CartProvider({ children }: CartProviderProps) {
-	const [cart, setCart] = useState<CartItem[]>([]);
+	const [cart, setCart] = useState<AddToCartItem[]>([]);
 
 	useEffect(() => {
 		const storedCart = localStorage.getItem("cart");

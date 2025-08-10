@@ -1,9 +1,12 @@
-export const defaultItem = [
+import { ProductType } from "../types";
+
+export const coffeeMenu: ProductType[] = [
 	{
 		productId: "1",
 		slug: "latte",
 		productName: "초콜릿 라떼",
 		productType: ["iced", "hot"],
+		productCategory: "Coffee",
 		productDescription: "This is the description of Item that can tell anything about the menu concept and all",
 		productPrice: 4200,
 		productImage: "/coffee.jpg",
@@ -13,6 +16,7 @@ export const defaultItem = [
 		slug: "americano",
 		productName: "아메리카노",
 		productType: ["iced", "hot"],
+		productCategory: "Coffee",
 		productDescription: "This is the description of Item that can tell anything about the menu concept and all",
 		productPrice: 4200,
 		productImage: "/noImage.jpg",
@@ -22,6 +26,7 @@ export const defaultItem = [
 		slug: "vanilla-latte",
 		productName: "바닐라 라떼",
 		productType: ["iced", "hot"],
+		productCategory: "Coffee",
 		productDescription: "Smooth and sweet vanilla flavor with rich espresso.",
 		productPrice: 4500,
 		productImage: "/noImage.jpg",
@@ -31,6 +36,7 @@ export const defaultItem = [
 		slug: "hazelnut-latte",
 		productName: "헤이즐넛 라떼",
 		productType: ["iced", "hot"],
+		productCategory: "Coffee",
 		productDescription: "Nutty hazelnut twist for a deeper taste experience.",
 		productPrice: 4600,
 		productImage: "/noImage.jpg",
@@ -40,6 +46,7 @@ export const defaultItem = [
 		slug: "caramel-macchiato",
 		productName: "카라멜 마끼아또",
 		productType: ["iced", "hot"],
+		productCategory: "Coffee",
 		productDescription: "Rich caramel layered over creamy steamed milk and espresso.",
 		productPrice: 4800,
 		productImage: "/noImage.jpg",
@@ -49,6 +56,7 @@ export const defaultItem = [
 		slug: "green-tea-latte",
 		productName: "말차 라떼",
 		productType: ["iced", "hot"],
+		productCategory: "Coffee",
 		productDescription: "Earthy matcha with a milky finish, perfect for tea lovers.",
 		productPrice: 4700,
 		productImage: "/noImage.jpg",
@@ -58,6 +66,7 @@ export const defaultItem = [
 		slug: "espresso",
 		productName: "에스프레소",
 		productType: ["iced", "hot"],
+		productCategory: "Coffee",
 		productDescription: "Strong, bold espresso shot to energize your day.",
 		productPrice: 3000,
 		productImage: "/noImage.jpg",

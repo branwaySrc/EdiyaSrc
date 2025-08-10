@@ -11,13 +11,11 @@ interface Props {
 }
 
 export default function ProductInteraction({ product }: Props) {
-	// ✨ 모든 옵션 상태를 ProductInteraction 컴포넌트에서 관리
 	const [selectedOptions, setSelectedOptions] = useState({
 		quantity: 1,
 		isIce: false,
 	});
 
-	// ✨ 수량 변경 핸들러
 	const handleQuantityChange = (change: number) => {
 		setSelectedOptions(prevOptions => ({
 			...prevOptions,
@@ -25,7 +23,6 @@ export default function ProductInteraction({ product }: Props) {
 		}));
 	};
 
-	// ✨ 온도 변경 핸들러
 	const handleIsIceChange = (value: boolean) => {
 		setSelectedOptions(prevOptions => ({
 			...prevOptions,

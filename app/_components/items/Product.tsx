@@ -7,8 +7,8 @@ function ProductList(props: PropsWithChildren) {
 }
 
 interface ProductItemProps {
-	productName: string;
 	slug: string;
+	productName: string;
 	productDescription?: string;
 	productPrice: number;
 	productImage: string;

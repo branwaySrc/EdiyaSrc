@@ -1,9 +1,11 @@
 // app/_util/types.ts (수정된 코드)
 
 export interface ProductType {
+	productId: string;
 	slug: string;
 	productName: string;
 	productType: string[];
+	productCategory: "Coffee" | "Beverage" | "Bakery" | "Snack";
 	productDescription: string;
 	productPrice: number;
 	productImage: string;
@@ -17,7 +19,3 @@ export interface AddToCartItem extends ProductType {
 }
 
 // 장바구니에 담긴 상품 타입 (CartState에서 사용)
-export interface CartItem extends ProductType {
-	isIce: boolean;
-	quantity: number;
-}

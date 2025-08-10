@@ -1,13 +1,27 @@
 "use client";
 
-import { PropsWithChildren, useState } from "react";
-import CaffeinMenuList from "./_components/menus/CaffeinMenuList";
+import { PropsWithChildren, useState, useEffect } from "react";
+import CoffeeMenuList from "./_components/menus/CoffeeMenuList";
+import BeverageMenuList from "./_components/menus/BeverageMenuList";
 import Category from "./_components/tiles/Category";
+import GoToCartList from './_components/items/GoToCartList';
 
 const CATEGORY = ["커피", "베버리지", "베이커리", "과자"];
+const STORAGE_KEY = "selectedCategory";
 
 export default function Home() {
-	const [selectedCategory, setSelectedCategory] = useState<string | null>(CATEGORY[0]);
+	const [selectedCategory, setSelectedCategory] = useState<string>(() => {
+		if (typeof window !== "undefined") {
+			return localStorage.getItem(STORAGE_KEY) || CATEGORY[0];
+		}
+		return CATEGORY[0];
+	});
+
+	// ✨ selectedCategory 상태가 변경될 때마다 localStorage에 저장합니다.
+	useEffect(() => {
+		localStorage.setItem(STORAGE_KEY, selectedCategory);
+	}, [selectedCategory]);
+
 	const handleCategoryClick = (category: string) => {
 		setSelectedCategory(category);
 	};
@@ -20,10 +34,11 @@ export default function Home() {
 				))}
 			</Category.Bar>
 			<HomeTitle>{selectedCategory}</HomeTitle>
-			{selectedCategory === "커피" && <CaffeinMenuList />}
-			{selectedCategory === "베버리지" && <div>🍹 Beverage List</div>}
-			{selectedCategory === "베이커리" && <div>🥐 Bakery List</div>}
-			{selectedCategory === "과자" && <div>🍪 Snack List</div>}
+			{selectedCategory === "커피" && <CoffeeMenuList />}
+			{selectedCategory === "베버리지" && <BeverageMenuList />}
+			{selectedCategory === "베이커리" && <BeverageMenuList />}
+			{selectedCategory === "과자" && <BeverageMenuList />}
+			<GoToCartList />
 		</>
 	);
 }

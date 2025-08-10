@@ -1,0 +1,55 @@
+// app/_components/tiles/ProductInteraction.tsx
+"use client";
+
+import { useState } from "react";
+import { ProductType } from "@/app/_util/types";
+import OptionSelection from "@/app/_components/tiles/OptionSelection";
+import FloatingBar from "@/app/_components/tiles/FloatingBar";
+
+interface Props {
+	product: ProductType;
+}
+
+export default function ProductInteraction({ product }: Props) {
+	// ✨ 모든 옵션 상태를 ProductInteraction 컴포넌트에서 관리
+	const [selectedOptions, setSelectedOptions] = useState({
+		quantity: 1,
+		isIce: false,
+	});
+
+	// ✨ 수량 변경 핸들러
+	const handleQuantityChange = (change: number) => {
+		setSelectedOptions(prevOptions => ({
+			...prevOptions,
+			quantity: prevOptions.quantity + change,
+		}));
+	};
+
+	// ✨ 온도 변경 핸들러
+	const handleIsIceChange = (value: boolean) => {
+		setSelectedOptions(prevOptions => ({
+			...prevOptions,
+			isIce: value,
+		}));
+	};
+
+	return (
+		<>
+			{/* OptionSelection에 상태와 핸들러를 props로 전달 */}
+			<OptionSelection
+				quantity={selectedOptions.quantity}
+				isIce={selectedOptions.isIce}
+				productPrice={product.productPrice}
+				onQuantityChange={handleQuantityChange}
+				onIsIceChange={handleIsIceChange}
+			/>
+			{/* FloatingBar에 선택된 옵션 상태와 상품 정보 전달 */}
+			<FloatingBar
+				product={{
+					...product,
+					...selectedOptions, // quantity와 isIce 추가
+				}}
+			/>
+		</>
+	);
+}

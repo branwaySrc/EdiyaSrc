@@ -1,9 +1,10 @@
 "use client";
 
-import { useCart, CartItem } from "@/app/_util/cartContext";
+import { useCart } from "@/app/_util/cartContext";
 import Toast from "../items/Toast";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { CartItem } from "@/app/_util/types";
 
 interface Props {
 	product: CartItem;
@@ -34,7 +35,7 @@ export default function FloatingBar(props: Props) {
 			<div className="fixed bottom-0 w-full min-w-sm max-w-xl mx-auto border-t border-slate-300 bg-white">
 				<section className="p-2 flex justify-between gap-2">
 					<button onClick={handleAddToCart} className="block items-center justify-center p-4 w-full border-2 border-blue-600 rounded-lg bg-blue-600">
-						<span className="text-white font-bold">장바구니 담기</span>
+						<span className="text-white font-bold">주문표에 담기</span>
 					</button>
 					<button
 						onClick={handleOrderClick}

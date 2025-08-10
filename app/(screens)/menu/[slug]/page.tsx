@@ -3,13 +3,16 @@ import { notFound } from "next/navigation";
 import NavHeader from "@/app/_components/tiles/NavHeader";
 import Image from "next/image";
 import FloatingBar from "@/app/_components/tiles/FloatingBar";
+import { ProductType } from "@/app/_util/types";
+
+import ProductInteraction from "./_components/ProductInteraction";
 
 type PageProps = {
 	params: Promise<{ slug: string }>;
 };
 
 export default async function MenuDetailPage({ params }: PageProps) {
-	const data = defaultItem;
+	const data: ProductType[] = defaultItem;
 	const resolvedParams = await params;
 	const product = data.find(product => product.slug === resolvedParams.slug);
 
@@ -29,7 +32,7 @@ export default async function MenuDetailPage({ params }: PageProps) {
 					<p className="font-semibold text-xl">{product.productPrice} 원</p>
 				</div>
 			</main>
-			<FloatingBar product={product} />
+			<ProductInteraction product={product} />
 		</>
 	);
 }

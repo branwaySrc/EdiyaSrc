@@ -1,5 +1,5 @@
 import Product from "../items/Product";
-import { defaultItem } from "@/app/util/sampleData";
+import { defaultItem } from "@/app/_util/sampleData";
 export default function CaffeinMenuList() {
 	const DATA = defaultItem;
 	return (

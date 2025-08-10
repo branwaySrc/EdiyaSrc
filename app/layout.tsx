@@ -5,6 +5,7 @@ import MobileLayout from "@/app/_components/layouts/mobileLayout";
 import MobileHeader from "@/app/_components/layouts/mobileHeader";
 import MobileFooter from "./_components/layouts/mobileFooter";
 import MobileBody from "./_components/layouts/mobileBody";
+import { CartProvider } from "./_util/cartContext";
 
 const notoSansKR = Noto_Sans_KR({
 	variable: "--font-noto-sans-kr",
@@ -24,11 +25,13 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={`${notoSansKR.variable} antialiased`}>
-				<MobileLayout>
-					<MobileHeader />
-					<MobileBody>{children}</MobileBody>
-					<MobileFooter />
-				</MobileLayout>
+				<CartProvider>
+					<MobileLayout>
+						<MobileHeader />
+						<MobileBody>{children}</MobileBody>
+						<MobileFooter />
+					</MobileLayout>
+				</CartProvider>
 			</body>
 		</html>
 	);

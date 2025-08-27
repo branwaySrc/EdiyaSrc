@@ -11,7 +11,7 @@ export const snackMenu: MenuType[] = [
 		productDescription: "바삭하고 달콤한 기본 쿠키.",
 		productPrice: 1500,
 		productImage: "/noImage.jpg",
-		productOptions: [],
+		productOptions: [{ optionCategory: "샷추가", optionValues: [{ optionName: "1샷 추가", cost: "추가없음" }] }],
 	},
 	{
 		productId: "S02",

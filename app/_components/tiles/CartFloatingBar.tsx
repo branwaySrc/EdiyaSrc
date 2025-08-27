@@ -10,7 +10,7 @@ interface Props {
 	product: AddToCartItem;
 }
 
-export default function FloatingBar(props: Props) {
+export default function CartFloatingBar(props: Props) {
 	const [showToast, setShowToast] = useState(false);
 	const { addToCart } = useCart();
 	const router = useRouter();

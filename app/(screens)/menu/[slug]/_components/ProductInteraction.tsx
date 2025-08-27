@@ -4,7 +4,7 @@
 import { useState } from "react";
 import { ProductType } from "@/app/_util/types";
 import OptionSelection from "@/app/_components/tiles/OptionSelection";
-import FloatingBar from "@/app/_components/tiles/FloatingBar";
+import CartFloatingBar from "@/app/_components/tiles/CartFloatingBar";
 
 interface Props {
 	product: ProductType;
@@ -41,7 +41,7 @@ export default function ProductInteraction({ product }: Props) {
 				onIsIceChange={handleIsIceChange}
 			/>
 			{/* FloatingBar에 선택된 옵션 상태와 상품 정보 전달 */}
-			<FloatingBar
+			<CartFloatingBar
 				product={{
 					...product,
 					...selectedOptions, // quantity와 isIce 추가

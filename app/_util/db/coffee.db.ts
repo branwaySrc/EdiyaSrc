@@ -13,17 +13,17 @@ export const coffeeMenu: MenuType[] = [
 		productImage: "/noImage.jpg",
 		productOptions: [
 			{
-				optionName: "Size",
+				optionCategory: "Size",
 				optionValues: [
-					{ option: "Regular", cost: 0 },
-					{ option: "Large", cost: 500 },
+					{ optionName: "Regular", cost: 0 },
+					{ optionName: "Large", cost: 500 },
 				],
 			},
 			{
-				optionName: "Size",
+				optionCategory: "Size",
 				optionValues: [
-					{ option: "Regular", cost: 0 },
-					{ option: "Large", cost: 500 },
+					{ optionName: "Regular", cost: 0 },
+					{ optionName: "Large", cost: 500 },
 				],
 			},
 		],
@@ -39,17 +39,17 @@ export const coffeeMenu: MenuType[] = [
 		productImage: "/noImage.jpg",
 		productOptions: [
 			{
-				optionName: "Size",
+				optionCategory: "Size",
 				optionValues: [
-					{ option: "Regular", cost: 0 },
-					{ option: "Large", cost: 500 },
+					{ optionName: "Regular", cost: 0 },
+					{ optionName: "Large", cost: 500 },
 				],
 			},
 			{
-				optionName: "Size",
+				optionCategory: "Size",
 				optionValues: [
-					{ option: "Regular", cost: 0 },
-					{ option: "Large", cost: 500 },
+					{ optionName: "Regular", cost: 0 },
+					{ optionName: "Large", cost: 500 },
 				],
 			},
 		],
@@ -65,17 +65,17 @@ export const coffeeMenu: MenuType[] = [
 		productImage: "/noImage.jpg",
 		productOptions: [
 			{
-				optionName: "Size",
+				optionCategory: "Size",
 				optionValues: [
-					{ option: "Regular", cost: 0 },
-					{ option: "Large", cost: 500 },
+					{ optionName: "Regular", cost: 0 },
+					{ optionName: "Large", cost: 500 },
 				],
 			},
 			{
-				optionName: "Size",
+				optionCategory: "Size",
 				optionValues: [
-					{ option: "Regular", cost: 0 },
-					{ option: "Large", cost: 500 },
+					{ optionName: "Regular", cost: 0 },
+					{ optionName: "Large", cost: 500 },
 				],
 			},
 		],
@@ -91,17 +91,17 @@ export const coffeeMenu: MenuType[] = [
 		productImage: "/noImage.jpg",
 		productOptions: [
 			{
-				optionName: "Size",
+				optionCategory: "Size",
 				optionValues: [
-					{ option: "Regular", cost: 0 },
-					{ option: "Large", cost: 500 },
+					{ optionName: "Regular", cost: 0 },
+					{ optionName: "Large", cost: 500 },
 				],
 			},
 			{
-				optionName: "Size",
+				optionCategory: "Size",
 				optionValues: [
-					{ option: "Regular", cost: 0 },
-					{ option: "Large", cost: 500 },
+					{ optionName: "Regular", cost: 0 },
+					{ optionName: "Large", cost: 500 },
 				],
 			},
 		],
@@ -117,17 +117,17 @@ export const coffeeMenu: MenuType[] = [
 		productImage: "/noImage.jpg",
 		productOptions: [
 			{
-				optionName: "Size",
+				optionCategory: "Size",
 				optionValues: [
-					{ option: "Regular", cost: 0 },
-					{ option: "Large", cost: 500 },
+					{ optionName: "Regular", cost: 0 },
+					{ optionName: "Large", cost: 500 },
 				],
 			},
 			{
-				optionName: "Size",
+				optionCategory: "Size",
 				optionValues: [
-					{ option: "Regular", cost: 0 },
-					{ option: "Large", cost: 500 },
+					{ optionName: "Regular", cost: 0 },
+					{ optionName: "Large", cost: 500 },
 				],
 			},
 		],
@@ -143,17 +143,17 @@ export const coffeeMenu: MenuType[] = [
 		productImage: "/noImage.jpg",
 		productOptions: [
 			{
-				optionName: "Size",
+				optionCategory: "Size",
 				optionValues: [
-					{ option: "Regular", cost: 0 },
-					{ option: "Large", cost: 500 },
+					{ optionName: "Regular", cost: 0 },
+					{ optionName: "Large", cost: 500 },
 				],
 			},
 			{
-				optionName: "Size",
+				optionCategory: "Size",
 				optionValues: [
-					{ option: "Regular", cost: 0 },
-					{ option: "Large", cost: 500 },
+					{ optionName: "Regular", cost: 0 },
+					{ optionName: "Large", cost: 500 },
 				],
 			},
 		],
@@ -169,17 +169,17 @@ export const coffeeMenu: MenuType[] = [
 		productImage: "/noImage.jpg",
 		productOptions: [
 			{
-				optionName: "Size",
+				optionCategory: "Size",
 				optionValues: [
-					{ option: "Regular", cost: 0 },
-					{ option: "Large", cost: 500 },
+					{ optionName: "Regular", cost: 0 },
+					{ optionName: "Large", cost: 500 },
 				],
 			},
 			{
-				optionName: "Size",
+				optionCategory: "Size",
 				optionValues: [
-					{ option: "Regular", cost: 0 },
-					{ option: "Large", cost: 500 },
+					{ optionName: "Regular", cost: 0 },
+					{ optionName: "Large", cost: 500 },
 				],
 			},
 		],
@@ -195,17 +195,17 @@ export const coffeeMenu: MenuType[] = [
 		productImage: "/noImage.jpg",
 		productOptions: [
 			{
-				optionName: "Size",
+				optionCategory: "Size",
 				optionValues: [
-					{ option: "Regular", cost: 0 },
-					{ option: "Large", cost: 500 },
+					{ optionName: "Regular", cost: 0 },
+					{ optionName: "Large", cost: 500 },
 				],
 			},
 			{
-				optionName: "Size",
+				optionCategory: "Size",
 				optionValues: [
-					{ option: "Regular", cost: 0 },
-					{ option: "Large", cost: 500 },
+					{ optionName: "Regular", cost: 0 },
+					{ optionName: "Large", cost: 500 },
 				],
 			},
 		],
@@ -221,17 +221,17 @@ export const coffeeMenu: MenuType[] = [
 		productImage: "/noImage.jpg",
 		productOptions: [
 			{
-				optionName: "Size",
+				optionCategory: "Size",
 				optionValues: [
-					{ option: "Regular", cost: 0 },
-					{ option: "Large", cost: 500 },
+					{ optionName: "Regular", cost: 0 },
+					{ optionName: "Large", cost: 500 },
 				],
 			},
 			{
-				optionName: "Size",
+				optionCategory: "Size",
 				optionValues: [
-					{ option: "Regular", cost: 0 },
-					{ option: "Large", cost: 500 },
+					{ optionName: "Regular", cost: 0 },
+					{ optionName: "Large", cost: 500 },
 				],
 			},
 		],
@@ -247,17 +247,17 @@ export const coffeeMenu: MenuType[] = [
 		productImage: "/noImage.jpg",
 		productOptions: [
 			{
-				optionName: "Size",
+				optionCategory: "Size",
 				optionValues: [
-					{ option: "Regular", cost: 0 },
-					{ option: "Large", cost: 500 },
+					{ optionName: "Regular", cost: 0 },
+					{ optionName: "Large", cost: 500 },
 				],
 			},
 			{
-				optionName: "Size",
+				optionCategory: "Size",
 				optionValues: [
-					{ option: "Regular", cost: 0 },
-					{ option: "Large", cost: 500 },
+					{ optionName: "Regular", cost: 0 },
+					{ optionName: "Large", cost: 500 },
 				],
 			},
 		],
